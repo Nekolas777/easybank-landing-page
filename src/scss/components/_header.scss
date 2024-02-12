@@ -1,0 +1,108 @@
+$mobile: 767px;
+
+/*=============== HEADER ===============*/
+.header {
+    width: 100%;
+    background-color: var(--very-light-gray);
+    position: fixed;
+}
+
+/*=============== NAVBAR ===============*/
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__menu {
+        height: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        height: inherit;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+        height: inherit;
+
+        &::after {
+            content: "";
+            height: 2px;
+            background: var(--White);
+            transform: translateY(-3px) scaleX(0);
+            display: block;
+
+            @include desactivate-animations-mobile;
+        }
+
+        &:hover::after {
+            height: 3px;
+            background: var(--li-gr);
+            transform: translateY(-3px) scaleX(1);
+            transition: transform 0.3s ease 0s;
+
+            @include desactivate-animations-mobile;
+        }
+    }
+
+    &__link {
+        @include center-flex;
+        color: var(--grayish-blue);
+        height: inherit;
+        letter-spacing: 1px;
+    }
+
+    &__toggle {
+        display: none;
+        cursor: pointer;
+
+        > i {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+
+        &__menu {
+            height: unset;
+            position: fixed;
+            box-shadow: 0 0 4px rgba(0,0,0,.1);
+            width: 90%;
+            top: -100%;
+            margin: 0 auto;
+            border-radius: 1rem;
+        }
+
+        &__list {
+            height: 100%;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__link {
+            padding: 1.5rem 0;
+            height: inherit;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        &__toggle {
+            @include center-flex;
+        }
+    }
+}
+
+.show-menu {
+    top: 6rem;
+}

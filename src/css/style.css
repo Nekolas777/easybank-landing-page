@@ -1,0 +1,203 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;700&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 5rem;
+  /*========== Primary Colors ==========*/
+  --first-color: hsl(233, 26%, 24%);
+  --second-color: hsl(136, 65%, 51%);
+  --third-color: hsl(192, 70%, 51%);
+  --li-gr: linear-gradient(45deg, hsl(136deg 65% 51%) 0%, hsl(175deg 100% 40%) 50%, hsl(192deg 70% 51%) 100%);
+  /*========== Neutral Colors ==========*/
+  --grayish-blue: hsl(233, 8%, 62%);
+  --gravish-blue-light: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  /*========== Font and typography ==========*/
+  --body-font: "Public Sans", sans-serif;
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 3rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.btn {
+  background: var(--li-gr);
+  padding: 15px 30px;
+  color: var(--white);
+  font-weight: var(--font-medium);
+  border-radius: 20px;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  background-color: var(--very-light-gray);
+  position: fixed;
+}
+
+/*=============== NAVBAR ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav__menu {
+  height: 100%;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  height: inherit;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__item {
+  width: 100%;
+  height: inherit;
+}
+.nav__item::after {
+  content: "";
+  height: 2px;
+  background: var(--White);
+  transform: translateY(-3px) scaleX(0);
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .nav__item::after {
+    transform: none;
+    content: none;
+  }
+}
+.nav__item:hover::after {
+  height: 3px;
+  background: var(--li-gr);
+  transform: translateY(-3px) scaleX(1);
+  transition: transform 0.3s ease 0s;
+}
+@media screen and (max-width: 767px) {
+  .nav__item:hover::after {
+    transform: none;
+    content: none;
+  }
+}
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grayish-blue);
+  height: inherit;
+  letter-spacing: 1px;
+}
+.nav__toggle {
+  display: none;
+  cursor: pointer;
+}
+.nav__toggle > i {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    height: unset;
+    position: fixed;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    top: -100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+  }
+  .nav__list {
+    height: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav__link {
+    padding: 1.5rem 0;
+    height: inherit;
+  }
+  .nav__btn {
+    display: none;
+  }
+  .nav__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.show-menu {
+  top: 6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

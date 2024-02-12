@@ -1,0 +1,8 @@
+// Import of partial files
+@import 'config/variables';
+@import 'base/base.scss';
+@import 'layout/layout';
+
+// Import components
+@import 'components/header';
+@import 'components/home';

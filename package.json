@@ -1,0 +1,14 @@
+{
+  "name": "easybank-landingpage",
+  "version": "1.0.0",
+  "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch src/scss/main.scss src/css/style.css"
+  },
+  "author": "Nicolas Esteban",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.70.0"
+  }
+}
