@@ -1,20 +1,32 @@
-$mobile: 767px;
-
 /*=============== HEADER ===============*/
 .header {
     width: 100%;
     background-color: var(--very-light-gray);
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 /*=============== NAVBAR ===============*/
 
 .nav {
+    /* width: 90%;
+    max-width: 1400px;
+    margin: 0 auto; */
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    &__logo {
+
+        display: flex;
+
+        > img {
+            height: 100%;
+        }
+    }
 
     &__menu {
         height: 100%;

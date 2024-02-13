@@ -1,0 +1,54 @@
+.service {
+
+    width: 100%;
+    background-color: var(--very-light-gray);
+    padding: 6rem 0;
+
+    &__cards {
+        margin-top: 3.5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 1.5rem;
+    }
+
+    &__card {
+        /* border: 1px solid blue; */
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        > p {
+            text-wrap: pretty;
+            letter-spacing: -0.5px;
+            font-weight: var(--font-light);
+            line-height: 1.5;
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 3rem;
+        }
+
+    }
+
+    @media screen and (max-width: $mobile) {
+        
+        &__content {
+            text-align: center;
+        }
+
+        &__cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, auto);
+            text-align: center;
+            gap: 3rem;
+        }
+
+    }
+
+}

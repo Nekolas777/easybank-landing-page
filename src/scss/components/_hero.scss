@@ -1,0 +1,50 @@
+.main {
+    width: 100%;
+    background-color: var(--white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.hero {
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 900px;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-template-rows: 650px;
+    justify-content: center;
+
+    &__info {
+        padding-left: 15rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        > p {
+            width: 50%;
+            min-width: 350px;
+            text-wrap: pretty;
+        }
+
+        >.btn {
+            align-self: flex-start;
+        }
+    }
+
+    &__left {
+        width: 100%;
+    }
+
+    &__right {
+
+        > img {
+            transform: translateX(100px);
+        }
+        
+    }
+
+}
