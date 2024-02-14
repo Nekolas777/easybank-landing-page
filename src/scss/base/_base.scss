@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-    line-height: 1.4;
+    line-height: 1.35;
     letter-spacing: .8px;
     font-size: 3rem;
     font-weight: var(--font-light);
@@ -38,6 +38,12 @@ h3 {
     font-size: 1.4rem;
     font-weight: var(--font-medium);
     color: var(--first-color);
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: var(--first-color);
+    font-weight: var(--font-regular);
 }
 
 p {
@@ -56,6 +62,12 @@ a {
 
 button {
     cursor: pointer;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -85,7 +97,7 @@ button {
 }
 
 @mixin desactivate-animations-mobile {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $medium) {
         transform: none;
         content: none;
     }

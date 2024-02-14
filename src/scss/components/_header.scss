@@ -10,9 +10,6 @@
 /*=============== NAVBAR ===============*/
 
 .nav {
-    /* width: 90%;
-    max-width: 1400px;
-    margin: 0 auto; */
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -82,7 +79,7 @@
         }
     }
 
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $medium) {
 
         &__menu {
             height: unset;

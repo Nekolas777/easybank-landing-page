@@ -1,9 +1,10 @@
 // Import of partial files
 @import 'config/variables';
-@import 'base/base.scss';
+@import 'base/base';
 @import 'layout/layout';
 
 // Import components
 @import 'components/header';
 @import 'components/hero';
 @import 'components/services';
+@import 'components/articles';

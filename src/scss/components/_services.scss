@@ -1,7 +1,7 @@
 .service {
 
     width: 100%;
-    background-color: var(--very-light-gray);
+    background-color: var(--gravish-blue-light);
     padding: 6rem 0;
 
     &__cards {
@@ -26,7 +26,7 @@
         }
     }
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: $large) {
         
         &__cards {
             grid-template-columns: repeat(2, 1fr);
