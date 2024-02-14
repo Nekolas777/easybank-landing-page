@@ -1,0 +1,126 @@
+.footer {
+
+    width: 100%;
+    padding: 3rem 0;
+    background-color: var(--first-color);
+
+    &__logo {
+
+        display: flex;
+
+        > img {
+            height: 100%;
+            width: 200px;
+        }
+    }
+    
+
+    // Si, tranquilamente puedes usar grid, pero mi ezquizofrenia a las 2:00 am lo quiso con flex xD
+    &__content {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    &__icons {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    &__sections {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        align-items: flex-end;
+        gap: 1.5rem;
+    }
+
+    @media screen and (max-width: $large) {
+        
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__icons {
+            gap: 2rem;
+            align-items: center;
+        }
+
+        &__copyright {
+            align-items: center;
+        }
+
+    }
+
+}
+
+.sections {
+
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: $large) {
+        
+        gap: 3rem;
+
+        &__left, &__right {
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+    }
+
+    @media screen and (max-width: $mobile) {
+        
+        gap: 1.5rem;
+        flex-direction: column;
+
+        &__left, &__right {
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+    }
+
+}

@@ -57,6 +57,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--white);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -355,6 +356,9 @@ article {
   }
 }
 @media screen and (max-width: 576px) {
+  .article__content > h2 {
+    text-align: center;
+  }
   .article__cards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
@@ -376,6 +380,107 @@ article {
 @media screen and (max-width: 576px) {
   .card__info {
     text-wrap: pretty;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 3rem 0;
+  background-color: var(--first-color);
+}
+.footer__logo {
+  display: flex;
+}
+.footer__logo > img {
+  height: 100%;
+  width: 200px;
+}
+.footer__content {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.footer__icons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+.footer__socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.footer__link {
+  text-decoration: none;
+  color: var(--white);
+}
+.footer__sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__icons {
+    gap: 2rem;
+    align-items: center;
+  }
+  .footer__copyright {
+    align-items: center;
+  }
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.sections__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sections__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .sections {
+    gap: 3rem;
+  }
+  .sections__left, .sections__right {
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sections {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .sections__left, .sections__right {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 }
 
