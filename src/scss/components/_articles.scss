@@ -42,7 +42,6 @@
         &__cards {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(4, auto);
-            text-align: center;
             gap: 3rem;
         }
 
@@ -63,6 +62,15 @@
             font-size: 1rem;
             letter-spacing: -0.5px;
         }
+        
+    }
+
+    @media screen and (max-width: $mobile) {
+
+        &__info {
+            text-wrap: pretty;
+        }
+
     }
 
 }
