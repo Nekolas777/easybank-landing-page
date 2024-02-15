@@ -8,12 +8,11 @@
 
         display: flex;
 
-        > img {
+        >img {
             height: 100%;
             width: 200px;
         }
     }
-    
 
     // Si, tranquilamente puedes usar grid, pero mi ezquizofrenia a las 2:00 am lo quiso con flex xD
     &__content {
@@ -39,11 +38,25 @@
         flex-direction: row;
         gap: 1rem;
         align-items: center;
+
+        > img {
+            cursor: pointer;
+
+            /* filter generator owo: https://codepen.io/sosuke/pen/Pjoqqp */
+            &:hover {
+                filter: invert(32%) sepia(32%) saturate(925%) 
+                hue-rotate(75deg) brightness(99%) contrast(65%);
+            }
+        }
     }
 
     &__link {
         text-decoration: none;
         color: var(--white);
+
+        &:hover {
+            color: var(--ho-Lime-Green);
+        }
     }
 
     &__sections {
@@ -62,7 +75,7 @@
     }
 
     @media screen and (max-width: $large) {
-        
+
         &__content {
             flex-direction: column;
             align-items: center;
@@ -100,10 +113,11 @@
     }
 
     @media screen and (max-width: $large) {
-        
+
         gap: 3rem;
 
-        &__left, &__right {
+        &__left,
+        &__right {
             align-items: center;
             gap: 1.5rem;
         }
@@ -111,11 +125,12 @@
     }
 
     @media screen and (max-width: $mobile) {
-        
+
         gap: 1.5rem;
         flex-direction: column;
 
-        &__left, &__right {
+        &__left,
+        &__right {
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;

@@ -57,7 +57,7 @@ ul {
     list-style: none;
 }
 
-a { 
+a {
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@ article {
 }
 
 .border {
-    border: 1px solid red;  // for testing owo
+    border: 1px solid red; // for testing owo
 }
 
 .btn {
@@ -87,6 +87,10 @@ article {
     color: var(--white);
     font-weight: var(--font-medium);
     border-radius: 20px;
+
+    &:hover {
+        background: var(--ho-Lime-Green);
+    }
 }
 
 // Mixins to use

@@ -18,6 +18,11 @@
     --very-light-gray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
 
+    /*========== Hover Colors ==========*/
+    --ho-Lime-Green: hsl(136, 81%, 71%);
+    --ho-Bright-Cyan: hwb(192 48% 5%);
+    --ho-li-gr: linear-gradient(to right, var(--ho-Lime-Green), var(--ho-Bright-Cyan));
+
     /*========== Font and typography ==========*/
     --body-font: 'Public Sans', sans-serif;
 

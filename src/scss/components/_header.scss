@@ -5,6 +5,15 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    transition: all .3s ease;
+
+    &.scrolled {
+        background-color: var(--first-color);
+
+        .nav__link {
+            color: var(--very-light-gray);
+        }
+    }
 }
 
 /*=============== NAVBAR ===============*/
@@ -20,7 +29,7 @@
 
         display: flex;
 
-        > img {
+        >img {
             height: 100%;
         }
     }
@@ -72,7 +81,7 @@
         display: none;
         cursor: pointer;
 
-        > i {
+        >i {
             display: block;
             font-size: 1.4rem;
             font-weight: bold;
@@ -84,7 +93,7 @@
         &__menu {
             height: unset;
             position: fixed;
-            box-shadow: 0 0 4px rgba(0,0,0,.1);
+            box-shadow: 0 0 4px rgba(0, 0, 0, .1);
             width: 90%;
             top: -100%;
             margin: 0 auto;
