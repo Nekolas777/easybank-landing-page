@@ -315,9 +315,6 @@ article {
   display: block;
   align-self: flex-start;
 }
-.hero__right {
-  /* border: 1px solid purple; */
-}
 .hero__right > img {
   transform: translateX(100px);
 }
@@ -345,7 +342,6 @@ article {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding-bottom: 6rem;
     background-position: 36% -550px;
     background-size: cover;
   }
@@ -363,12 +359,11 @@ article {
     align-items: center;
     justify-content: center;
     height: 100%;
+    transform: translate(0, -75px);
   }
   .hero__info > h1 {
     font-size: 2.8rem;
     text-align: center;
-    width: 100%;
-    height: 100%;
     text-wrap: balance;
   }
   .hero__info > p {
