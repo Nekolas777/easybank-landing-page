@@ -95,20 +95,27 @@
             position: fixed;
             box-shadow: 0 0 4px rgba(0, 0, 0, .1);
             width: 90%;
-            top: -100%;
+            /* top: -100%; */
+            transform: translateY(-150%);
             margin: 0 auto;
-            border-radius: 1rem;
+            opacity: 0;
         }
 
         &__list {
             height: 100%;
+            width: 100%;
             flex-direction: column;
             gap: 0;
+            background-color: var(--white);
+            border-radius: 10px;
         }
 
         &__link {
             padding: 1.5rem 0;
             height: inherit;
+            color: var(--first-color) !important;
+            font-weight: var(--font-medium);
+            letter-spacing: .5px;
         }
 
         &__btn {
@@ -117,10 +124,13 @@
 
         &__toggle {
             @include center-flex;
+            color: #000;
         }
     }
 }
 
 .show-menu {
-    top: 6rem;
+    opacity: 1;
+    transform: translateY(67%);
+    transition: all .4s ease;
 }
