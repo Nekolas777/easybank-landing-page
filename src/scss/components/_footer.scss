@@ -9,8 +9,9 @@
         display: flex;
 
         >img {
+            width: 100%;
             height: 100%;
-            width: 200px;
+            width: 175px;
         }
     }
 
@@ -38,8 +39,10 @@
         flex-direction: row;
         gap: 1rem;
         align-items: center;
+        justify-content: center;
 
         > img {
+            width: 20px;
             cursor: pointer;
 
             /* filter generator owo: https://codepen.io/sosuke/pen/Pjoqqp */
@@ -47,6 +50,7 @@
                 filter: invert(32%) sepia(32%) saturate(925%) 
                 hue-rotate(75deg) brightness(99%) contrast(65%);
             }
+
         }
     }
 
@@ -88,6 +92,14 @@
 
         &__copyright {
             align-items: center;
+        }
+
+        &__socials {
+            gap: 1.5rem;
+
+            > img {
+                width: 25px;
+            }
         }
 
     }
@@ -135,7 +147,6 @@
             align-items: center;
             gap: 1.5rem;
         }
-
     }
 
 }

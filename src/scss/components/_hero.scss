@@ -10,7 +10,7 @@
     background-image: url("/images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 900px;
+    background-position: 950px;
 
     display: grid;
     grid-template-columns: auto auto;
@@ -50,6 +50,22 @@
         
     }
 
+    @media screen and (max-width: 1400px) {
+        background-position: 550px;
+
+        &__info {
+            padding-left: 5rem;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        background-position: 450px;
+
+        &__info {
+            padding-left: 15rem;
+        }
+    }
+
     @media screen and (max-width: $large) {
         
         grid-template-columns: auto;
@@ -59,6 +75,8 @@
         height: 100%;
         width: 100%;
         padding-bottom: 6rem;
+        background-position: 36% -550px;
+        background-size: cover;
 
         &__left {
             display: flex;
@@ -105,9 +123,16 @@
                 transform: translate(0, -100px);
                 width: 90%;
                 text-align: center;
-                min-width: 250px;
+                min-width: 350px;
             }
         }
+    }
+
+    @media screen and (max-width: $mobile) {
+
+        background-image: url("/images/bg-intro-mobile.svg");
+        background-position: 50% -50px;
+        background-size: contain;
     }
 
 }
